@@ -7,6 +7,6 @@ import kotlinx.coroutines.flow.StateFlow
  */
 interface NoteRepository {
 
-    fun getSingleNote(noteId: Int): StateFlow<Note>
-    fun addSingleNote(note: Note): StateFlow<Boolean>
+    fun getSingleNote(noteId: Int): Note
+    fun addSingleNote(note: Note): Boolean
 }
