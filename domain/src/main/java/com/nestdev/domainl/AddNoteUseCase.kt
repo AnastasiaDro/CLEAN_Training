@@ -7,5 +7,4 @@ class AddNoteUseCase (noteRepository: NoteRepository) {
     fun addNote(note: Note) {
         noteRepo.addSingleNote(note)
     }
-
 }

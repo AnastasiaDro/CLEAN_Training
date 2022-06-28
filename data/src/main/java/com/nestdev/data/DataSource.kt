@@ -4,7 +4,6 @@ import com.nestdev.domainl.Note
 
 class DataSource {
     val notesList = mutableListOf<Note>()
-
     init {
         for (i in 0..10)
             notesList[i] = Note(i, "Here is a note number $i")
