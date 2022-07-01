@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello_from_presentation">Hello from presentation layer!</string>
+    <string name="show_next_note">Show next note</string>
+</resources>

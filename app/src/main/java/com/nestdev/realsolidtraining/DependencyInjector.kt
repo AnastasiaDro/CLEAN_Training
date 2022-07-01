@@ -7,7 +7,7 @@ import com.nestdev.domainl.NoteRepository
 //Just for writing something in apllication class
 class DependencyInjector {
     fun printHello() = println("Hello, I am SingleTone example instance")
-    fun getNoteRepositoryInstanse(): NoteRepository {
+    fun getNoteRepositoryInstance(): NoteRepository {
         if (noteRepository == null)
         {
             noteRepository = NoteRepositoryImpl()

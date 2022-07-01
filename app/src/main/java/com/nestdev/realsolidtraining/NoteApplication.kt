@@ -7,14 +7,13 @@ import com.nestdev.domainl.GetNoteUseCase
 import com.nestdev.domainl.NoteRepository
 
 class NoteApplication : Application() {
-   private var noteRepository = NoteRepositoryImpl()
+   private var dependencyInjector = DependencyInjector()
+
     override fun onCreate() {
         super.onCreate()
-        AddNoteUseCase.injectNoteRepository(getNoteRepositoryInstance())
-        GetNoteUseCase.injectNoteRepository(getNoteRepositoryInstance())
+        AddNoteUseCase.injectNoteRepository(dependencyInjector.getNoteRepositoryInstance())
+        GetNoteUseCase.injectNoteRepository(dependencyInjector.getNoteRepositoryInstance())
     }
 
-    private fun getNoteRepositoryInstance(): NoteRepository {
-            return noteRepository
-    }
+
 }
