@@ -1,16 +1,13 @@
 package com.nestdev.domainl
 
-class GetNoteUseCase : UseCaseFactory() {
 
-    fun getNote(id: Int) {
-        noteRepository?.getSingleNote(id)
-    }
+//TODO It is not really factory now, need to make factory later. Moreover, it doesn't work -_-'
+abstract class UseCaseFactory {
 
     companion object {
         var noteRepository: NoteRepository? = null
         fun injectNoteRepository(noteRepo: NoteRepository) {
             noteRepository = noteRepo
-            println("GetNoteUseCase has been injected")
         }
     }
 }

@@ -6,7 +6,7 @@ class DataSource {
     val notesList = mutableListOf<Note>()
     init {
         for (i in 0..10)
-            notesList[i] = Note(i, "Here is a note number $i")
+            notesList.add( Note(i, "Here is a note number $i"))
     }
 
     fun getNote(id: Int): Note = notesList[id]
